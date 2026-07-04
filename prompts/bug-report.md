@@ -4,7 +4,7 @@ File a structured bug report with reproduction steps.
 
 ## Template
 
-```markdown
+````markdown
 ## Summary
 [One-line description of the bug]
 
@@ -36,11 +36,11 @@ File a structured bug report with reproduction steps.
 
 ## Additional Context
 [Any other relevant information]
-```
+````
 
 ## Example
 
-```markdown
+````markdown
 ## Summary
 Task creation fails when title contains special characters
 
@@ -66,7 +66,7 @@ Server returns 500 error, no task created
 POST /api/tasks 500
 Error: SQL syntax error near ">"
 ```
-```
+````
 
 ## Rules
 

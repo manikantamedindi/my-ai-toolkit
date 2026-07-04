@@ -78,6 +78,14 @@ const results = await Promise.all(
 - Rate limit endpoints
 - Validate Content-Type and Content-Length
 
+## Red Flags
+
+- Unhandled promise rejections (no try/catch or .catch on async handlers)
+- No input validation on mutation endpoints
+- Secrets or credentials in code, logs, or env defaults
+- Synchronous operations in hot paths (blocking the event loop)
+- SQL string concatenation instead of parameterized queries
+
 ## Verification
 
 - [ ] Error middleware is the last middleware registered

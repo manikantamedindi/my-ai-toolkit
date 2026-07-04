@@ -8,6 +8,7 @@ tools:
   edit: true
   glob: true
   grep: true
+  bash: true
 ---
 
 # Frontend Engineer

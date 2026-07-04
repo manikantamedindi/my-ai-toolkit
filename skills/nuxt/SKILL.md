@@ -96,6 +96,14 @@ export default defineNuxtConfig({
 })
 ```
 
+## Red Flags
+
+- Not using auto-imports (manually importing from `#imports`)
+- Server routes in `pages/` instead of `server/api/`
+- No error handling in `useFetch` / `useAsyncData`
+- Using raw `$fetch` where `useFetch` with dedup/refresh would work
+- Module configuration duplication across multiple config files
+
 ## Verification
 
 - [ ] Auto-imports work without explicit imports

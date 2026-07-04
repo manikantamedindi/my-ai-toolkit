@@ -86,6 +86,14 @@ it('sets completedAt when task is completed', async () => {
 - **Descriptive test names** — read like a specification
 - **Prefer real implementations** over mocks (real → fake → stub → mock)
 
+## Red Flags
+
+- Tests that verify implementation details instead of behavior (break on refactor)
+- Over-mocking — mocking internal functions instead of testing real integration
+- Skipped or disabled tests in the suite
+- Snapshot tests that nobody reviews (large, brittle, accepted without scrutiny)
+- Test names that don't describe expected behavior ("test 1", "should work")
+
 ## Verification
 
 - [ ] Every new behavior has a corresponding test

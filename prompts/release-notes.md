@@ -10,25 +10,26 @@ Generate release notes from git history between tags or commits.
 ## Highlights
 [1-2 sentence summary of the most important changes]
 
-## What's New
-- [Feature]: [description]
+## Added
 - [Feature]: [description]
 
-## Bug Fixes
-- [Bug]: [description and impact]
+## Fixed
 - [Bug]: [description and impact]
 
-## Breaking Changes
-- [Change]: [migration instructions]
+## Changed
+- [Change]: [description of behavioral or dependency change]
 
-## Deprecations
+## Deprecated
 - [Feature]: [alternative or timeline for removal]
+
+## Removed
+- [Feature]: [removed with migration path if applicable]
+
+## Security
+- [Fix]: [CVE or vulnerability description]
 
 ## Performance
 - [Optimization]: [before/after metrics if available]
-
-## Dependencies
-- [Dependency]: [old version → new version]
 ```
 
 ## Example
@@ -39,17 +40,18 @@ Generate release notes from git history between tags or commits.
 ## Highlights
 Task notifications and improved search performance.
 
-## What's New
+## Added
 - Email notifications when tasks are completed
 - Full-text search on task titles and descriptions
 - Dark mode support
 
-## Bug Fixes
-- Fixed empty task list returning 404 instead of 200
-- Fixed notification preferences not saving on mobile
+## Fixed
+- Empty task list returning 404 instead of 200
+- Notification preferences not saving on mobile
 
-## Breaking Changes
-- Notification service configuration format changed (see migration guide)
+## Changed
+- Upgraded Express from 4.18 to 4.21
+- Notification service configuration format updated (see migration guide)
 
 ## Performance
 - Search queries 60% faster with new GIN index
@@ -57,7 +59,8 @@ Task notifications and improved search performance.
 
 ## Rules
 
-- Group by category (Added, Fixed, Changed, Deprecated, Removed, Security)
+- Group by category: Added, Fixed, Changed, Deprecated, Removed, Security, Performance
 - Each entry describes user impact, not implementation detail
 - Include migration instructions for breaking changes
 - Reference issue numbers where applicable
+- Keep highlights to 1-2 sentences maximum

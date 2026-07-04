@@ -1,25 +1,41 @@
 # Installation
 
+## Prerequisites
+
+- OpenCode installed (any recent version)
+- `~/.config/opencode/skills/` and `~/.config/opencode/agents/` directories exist
+
+```bash
+mkdir -p ~/.config/opencode/skills ~/.config/opencode/agents
+```
+
 ## Clone
 
 ```bash
+# SSH (recommended)
 git clone git@github.com:manikantamedindi/my-ai-toolkit.git
-cd my-ai-toolkit
+
+# HTTPS (alternative)
+git clone https://github.com/manikantamedindi/my-ai-toolkit.git
 ```
 
 ## Make Skills/Agents Available to OpenCode
 
-### Option 1: Global symlink (recommended)
+### Option 1: Global symlink (recommended for development)
 
 ```bash
-# Link skills
-ln -sf "$PWD/skills"/* ~/.config/opencode/skills/
+# Link all skills
+for dir in skills/*/; do
+  ln -sf "$PWD/$dir" ~/.config/opencode/skills/
+done
 
-# Link agents
-ln -sf "$PWD/agents"/* ~/.config/opencode/agents/
+# Link all agents
+for file in agents/*.md; do
+  ln -sf "$PWD/$file" ~/.config/opencode/agents/
+done
 ```
 
-### Option 2: Copy files
+### Option 2: Copy files (stable, no git dependency)
 
 ```bash
 # Copy skills
@@ -31,15 +47,39 @@ cp agents/* ~/.config/opencode/agents/
 
 ### Option 3: Git-based plugin (if supported by your OpenCode version)
 
-Configure `opencode.json` to use this repo as a remote skill source.
+Configure the repo as a remote skill source in `opencode.json` (see configuration.md).
 
 ## Verify Installation
 
-Run OpenCode and ask it what skills are available. You should see entries for `frontend`, `react`, `testing`, `accessibility`, `seo`, etc.
+Run OpenCode and check available skills:
+
+```
+Available skills should include: frontend, react, vue, nextjs, nuxt, javascript, typescript, nodejs, ui-ux, accessibility, performance, seo, testing, git
+```
+
+Test a skill invocation:
+
+```
+"Use the testing skill to help me write tests for this function"
+```
 
 ## Uninstall
 
 ```bash
-rm -rf ~/.config/opencode/skills/{frontend,react,vue,nextjs,nuxt,javascript,typescript,nodejs,ui-ux,accessibility,performance,seo,testing,git}
-rm -rf ~/.config/opencode/agents/{frontend-engineer,code-reviewer,bug-fixer,architect,ui-reviewer,performance-engineer,seo-specialist,documentation-writer}
+# Remove all toolkit skills
+for skill in frontend react vue nextjs nuxt javascript typescript nodejs ui-ux accessibility performance seo testing git; do
+  rm -rf ~/.config/opencode/skills/"$skill"
+done
+
+# Remove all toolkit agents
+for agent in frontend-engineer code-reviewer bug-fixer architect ui-reviewer performance-engineer seo-specialist documentation-writer; do
+  rm -f ~/.config/opencode/agents/"$agent".md
+done
+```
+
+## Update
+
+```bash
+git pull origin main
+# Re-run the symlink or copy command above to refresh
 ```

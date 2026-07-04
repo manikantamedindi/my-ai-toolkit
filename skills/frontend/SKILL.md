@@ -104,6 +104,14 @@ Test at 320px, 768px, 1024px, 1440px.
 - Color contrast >= 4.5:1 for normal text
 - Loading, error, and empty states for all data-driven components
 
+## Red Flags
+
+- Components over 200 lines — split them
+- No loading, error, or empty states on data-driven components
+- Prop drilling past 3 levels without introducing context
+- Inline styles or arbitrary pixel values instead of design tokens
+- "AI aesthetic" (purple gradients, oversized cards, excessive shadows)
+
 ## Verification
 
 - [ ] Component renders without console errors

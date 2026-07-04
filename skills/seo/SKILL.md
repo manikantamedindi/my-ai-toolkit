@@ -90,6 +90,14 @@ Sitemap: https://example.com/sitemap.xml
 - Heading structure: one H1, logical H2/H3 hierarchy
 - Internal linking: linked to related content with descriptive anchor text
 
+## Red Flags
+
+- Duplicate or missing title tags across pages
+- No meta description or auto-generated descriptions
+- Missing canonical URL on pages accessible via multiple paths
+- Invalid JSON-LD that fails Google Rich Results validation
+- Broken internal links or orphan pages with no internal links
+
 ## Verification
 
 - [ ] Each page has unique, descriptive title and meta description

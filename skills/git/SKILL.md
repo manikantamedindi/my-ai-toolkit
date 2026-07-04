@@ -89,6 +89,14 @@ git tag -a v1.2.3 -m "v1.2.3: Add task completion notification"
 git push origin v1.2.3
 ```
 
+## Red Flags
+
+- Large commits containing multiple unrelated changes
+- Commit messages like "fix", "update", or "stuff"
+- Force-pushing to shared branches without team coordination
+- WIP or debug code committed alongside feature work
+- Committing secrets, credentials, or API keys
+
 ## Verification
 
 - [ ] Commit message follows Conventional Commits format

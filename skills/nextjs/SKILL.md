@@ -93,6 +93,14 @@ export const metadata: Metadata = {
 }
 ```
 
+## Red Flags
+
+- `'use client'` on every page when Server Components would work
+- Not using `generateStaticParams` for static routes
+- Broad middleware matchers matching too many routes
+- Data fetching in client components when server fetch is possible
+- Missing `metadata` export on pages
+
 ## Verification
 
 - [ ] Server Components used where possible (no unnecessary 'use client')

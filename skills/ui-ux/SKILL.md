@@ -76,6 +76,14 @@ Never skip heading levels. Never use heading styles for non-heading content.
 - **Card grid** for browse/explore pages
 - **Full-width** for landing/hero sections
 
+## Red Flags
+
+- Arbitrary spacing values not on the project's spacing scale
+- Inconsistent typography — skipping heading levels, using heading styles on non-headings
+- Color as the sole indicator of state (missing text labels or icons)
+- Lorem ipsum or placeholder text that hides real layout problems
+- Oversized padding that wastes screen space on all viewports
+
 ## Verification
 
 - [ ] Consistent spacing scale used throughout

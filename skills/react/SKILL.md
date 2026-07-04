@@ -85,6 +85,14 @@ function TaskApp() {
 - **Custom hooks** to encapsulate reusable logic
 - **Co-located** tests, styles, and types with components
 
+## Red Flags
+
+- `useEffect` used for derived state (compute it instead)
+- Prop drilling deeper than 3 levels
+- Context used for frequently-updating state (causes full subtree re-renders)
+- Over-engineering: premature abstractions, generic components before 3rd use case
+- `any` type or `as` casts without justification
+
 ## Verification
 
 - [ ] No unnecessary re-renders (verify with React DevTools)

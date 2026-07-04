@@ -101,6 +101,14 @@ function Dialog({ isOpen }: { isOpen: boolean }) {
 - Verify no color-only information
 - Test zoom to 200%
 
+## Red Flags
+
+- Generic `<div>` or `<span>` when semantic HTML (`<button>`, `<nav>`, `<main>`) exists
+- Missing labels on form inputs or icon-only buttons
+- No focus management after content changes (modals, dynamic updates)
+- Keyboard traps or broken Tab order
+- `prefers-reduced-motion` not respected for animations
+
 ## Verification
 
 - [ ] Semantic HTML is used over generic `<div>`s

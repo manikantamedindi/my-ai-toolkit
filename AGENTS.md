@@ -20,7 +20,7 @@ docs/          - Documentation
 - 5 prompt templates (`prompts/*.md`) with examples and templates
 - 3 documentation files (`docs/*.md`) with practical setup guides
 - No build, test, lint, or typecheck scripts
-- No `package.json`, `opencode.json`, or config files
+- No `package.json`, `opencode.json`, or config files (this AGENTS.md is the project's instruction file)
 
 ## Skill Invocation Rules
 
@@ -70,3 +70,9 @@ docs/          - Documentation
 ## Adding content
 
 Create skill files under `skills/<domain>/` as `SKILL.md` with YAML frontmatter (`name`, `description` required). Add agent definitions as `.md` files in `agents/` with frontmatter. Add prompt templates in `prompts/`. Project templates go under `templates/`.
+
+## See Also
+
+- `docs/installation.md` — Setup instructions
+- `docs/configuration.md` — OpenCode config and skill permissions
+- `docs/usage.md` — Workflow examples and intent mapping

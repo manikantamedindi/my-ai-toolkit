@@ -83,6 +83,14 @@ class ValidationError extends Error {
 }
 ```
 
+## Red Flags
+
+- `var` declarations anywhere in code
+- Mutable shared state across modules
+- Callback patterns where async/await would be cleaner
+- Unused imports or variables
+- `==` instead of `===` (loose equality)
+
 ## Verification
 
 - [ ] No `var` — use `const` / `let`

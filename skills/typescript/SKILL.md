@@ -96,6 +96,14 @@ palette.green.toUpperCase() // OK
 - Export types used across modules
 - Inline types used only in one location
 
+## Red Flags
+
+- `any` used where `unknown` with type narrowing would work
+- Unnecessary type assertions (`as`) that silence real type errors
+- Over-engineering types with complex conditional types for simple use cases
+- `// @ts-ignore` or `// @ts-expect-error` without justification
+- Designing overly generic types before the third use case demands it
+
 ## Verification
 
 - [ ] `strict: true` in tsconfig

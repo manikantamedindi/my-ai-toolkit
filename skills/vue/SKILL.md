@@ -90,6 +90,14 @@ export const useTaskStore = defineStore('tasks', () => {
 - **Async components** with `defineAsyncComponent` for code splitting
 - **Scoped styles** over global CSS
 
+## Red Flags
+
+- Over-using watchers when computed properties would work
+- Mixing Options API and Composition API in the same component
+- Missing `:key` in `v-for` (always provide a unique key)
+- Mutating props directly in child components
+- Large components over 200 lines
+
 ## Verification
 
 - [ ] No template warnings in console
