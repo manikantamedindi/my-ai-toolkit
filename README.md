@@ -2,6 +2,21 @@
 
 A collection of reusable AI Skills, Agents, Prompt Templates, and Workflows for OpenCode.
 
+
+# Installation
+
+## One-line install
+
+```bash
+git clone https://github.com/manikantamedindi/my-ai-toolkit.git
+
+cd my-ai-toolkit
+
+chmod +x install.sh
+
+./install.sh
+```
+
 ## Repository Structure
 
 ```
